@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <title>HomeTasks</title>
+    <base href="~/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,100" />
+    <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css" media="screen,projection" />
+
+    <link rel="stylesheet" href="site.css" />
+
+    <link rel="manifest" href="~/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Tasks">
+    <meta name="apple-mobile-web-app-title" content="Tasks">
+    <meta name="theme-color" content="#29b6f6">
+    <meta name="msapplication-navbutton-color" content="#29b6f6">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="https://localhost.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#29b6f6">
+
+
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/images/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/icons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/images/icons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/images/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg" color="#29b6f6">
+    <link rel="shortcut icon" href="/images/icons/favicon.ico">
+    <meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/images/icons/browserconfig.xml">
+</head>
+<body>
+    <app-root>
+        <div class="loading-screen">
+            <div class="center">
+                <h1>Home tasks</h1>
+                <img class="logo" alt="home tasks" src="~/images/icons/main.png" />
+
+                <img class="loader" src="~/images/utils/loading.gif" alt="loading" />
+                <noscript>
+                    <div class="noscript">
+                        Your browser does not support JavaScript!
+                    </div>
+                </noscript>
+            </div>
+        </div>
+    </app-root>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+
+    <script src="site.js"></script>
+    <script src="~/service-register.js"></script>
+    <script src="~/sw/background-sync.js"></script>
+
+    <script>
+        $('.loader').show();
+
+        System.import('app').catch(console.error.bind(console));
+    </script>
+</body>
+</html>

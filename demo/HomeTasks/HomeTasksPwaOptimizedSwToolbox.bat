@@ -1,0 +1,2 @@
+cd src\HomeTasksPwaOptimizedSwToolbox
+dotnet bin\Debug\netcoreapp1.1\HomeTasksPwaOptimizedSwToolbox.dll

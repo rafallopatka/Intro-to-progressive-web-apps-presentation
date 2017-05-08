@@ -1,0 +1,39 @@
+lighthouse google extension
+
+manifest generator:
+https://tomitm.github.io/appmanifest/
+
+favicon generator:
+https://realfavicongenerator.net
+
+validator:
+https://manifest-validator.appspot.com/
+
+https://jakearchibald.com/2014/offline-cookbook/
+https://addyosmani.com/blog/getting-started-with-progressive-web-apps/
+https://developers.google.com/web/fundamentals/getting-started/codelabs/offline/
+https://developers.google.com/web/fundamentals/getting-started/codelabs/your-first-pwapp/
+https://www.w3.org/TR/service-workers/
+https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker
+
+chrome://inspect/#service-workers
+
+https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
+https://www.youtube.com/watch?v=4-WnlHhqcjU&feature=youtu.be&list=PLFZ5NyC0xHDaaTy6tY9p0C0jd_rRRl5Zm
+
+https://www.ampproject.org/it/docs/guides/author-develop/pwa-amp
+
+https://ponyfoo.com/articles/backgroundsync
+
+https://developers.google.com/web/updates/2015/12/background-sync
+
+https://serviceworke.rs/push-payload_index_doc.html
+
+https://ponyfoo.com/articles/backgroundsync
+https://medium.com/offline-camp/hack-time-service-workers-background-sync-and-pouchdb-3c8b71535823
+
+https://github.com/mozilla/serviceworker-cookbook
+
+https://localforage.github.io/localForage/#multiple-instances-createinstance
+
+https://davidwalsh.name/fetch

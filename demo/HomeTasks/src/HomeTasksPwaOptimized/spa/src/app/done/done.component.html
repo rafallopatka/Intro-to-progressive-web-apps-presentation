@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row" id="todo-container">
+        <div class="col s12 m12" *ngFor="let task of tasks">
+            <div class="task card horizontal waves-effect waves-light">
+                <div class="card-image">
+                    <img attr.src="/assets/images/categories/{{task.category.uniqueName}}.png">
+
+                    <div class="chip">
+                        {{task.responsibleUser.name}}
+                    </div>
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p class="description">{{task.description}}</p>
+                    </div>
+                    <div class="card-action">
+                        <input type="checkbox" id="state_{{task.id}}" checked="checked" disabled="disabled"/>
+                        <label attr.for="state_{{task.id}}">{{task.lastModification | date: 'medium' }}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

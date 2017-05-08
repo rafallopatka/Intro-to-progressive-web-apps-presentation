@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="row" id="todo-container">
+        <div class="col s12 m6" *ngFor="let task of tasks">
+            <div class="task card horizontal waves-effect waves-light" [ngClass]="{ 'completed': task.isDone }">
+                <div class="card-image">
+                    <img attr.src="/images/categories/{{task.category.uniqueName}}.png">
+
+                    <div class="chip">
+                        {{task.responsibleUser.name}}
+                    </div>
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p class="description">{{task.description}}</p>
+                    </div>
+                    <div class="card-action">
+                        <input type="checkbox" id="state_{{task.id}}" [(ngModel)]="task.isDone" (ngModelChange)="markAsCompleted($event, task)" />
+
+                        <label *ngIf="!task.isDone" attr.for="state_{{task.id}}">To-do</label>
+                        <label *ngIf="task.isDone" attr.for="state_{{task.id}}">Done</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large red waves-effect waves-light modal-trigger" href="#add-task-modal" (click)="invokeCreateTaskDialog()">
+        <i class="large material-icons">add</i>
+    </a>
+</div>
+
+<div id="add-task-modal" class="modal">
+    <div class="modal-content">
+        <h4>Add task</h4>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="col s12">
+                        <label class="description-label" for="description-field">description</label>
+                        
+                        <textarea required="required" id="description-field" [(ngModel)]='newTaskModel.description' name="description-field" ></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <label class="static-label" for="category-field">category</label>
+                        
+                        <select required="required"  name="category-field" [(ngModel)]="newTaskModel.category">
+                            <option *ngFor="let c of categories" [ngValue]="c">{{c.displayName}}</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col s12">
+                        <label class="static-label" for="responsibleUser-field">responsible</label>
+                        
+                        <select required="required"  name="responsibleUser-field" [(ngModel)]="newTaskModel.responsibleUser">
+                            <option *ngFor="let u of users" [ngValue]="u">{{u.name}}</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat red btn white-text" (click)="saveTask()">Add</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+</div>

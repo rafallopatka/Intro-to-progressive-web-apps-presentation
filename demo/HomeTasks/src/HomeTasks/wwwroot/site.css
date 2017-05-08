@@ -1,0 +1,45 @@
+#app-content {
+    padding-top: 50px;
+}
+
+
+.nav-wrapper {
+    z-index: 1000;    
+}
+
+
+#sidenav-overlay {
+    z-index: 100;
+}
+
+
+select {
+    display: inline;
+}
+
+select option{
+    height: 50px;
+}
+
+
+.static-label {
+    top: 3rem !important;
+}
+
+.description-label {
+    top: 7rem !important;
+}
+
+textarea {
+    background: #fff !important;
+    min-height: 40px;
+    border: 1px solid #f2f2f2;
+}
+
+.card-image img {
+    height: 190px;
+}
+
+.description {
+    font-weight: 500;
+}

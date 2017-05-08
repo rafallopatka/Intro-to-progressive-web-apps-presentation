@@ -1,0 +1,1029 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>intro to progressive web apps</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/raf.css">
+	<link rel="stylesheet" href="css/helpers.css">
+	<!--<link rel="stylesheet" href="lib/css/solarized-light.css">-->
+	<link rel="stylesheet" href="lib/css/solarized-light.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Intro to</h2>
+				<h1>Progressive Web Apps</h1>
+			</section>
+
+			<section>
+				<section>
+					<h3>What are Progressive Web Apps?</h3>
+				</section>
+
+				<section>
+					<h4>Progressive Web Apps are:</h4>
+					<blockquote>
+						&ldquo;A Progressive Web App uses modern web capabilities to deliver an app-like user experience.&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+					<h4>Progressive Web Apps are:</h4>
+					<ul>
+						<li>
+							Progressive
+							<!--- Work for every user, regardless of browser choice because they’re built with progressive enhancement as a core tenet.-->
+						</li>
+						<li>
+							Responsive
+							<!--- Fit any form factor, desktop, mobile, tablet, or whatever is next.-->
+						</li>
+						<li>
+							Connectivity independent
+							<!--- Enhanced with service workers to work offline or on low quality networks.-->
+						</li>
+						<li>
+							App-like
+							<!--- Use the app-shell model to provide app-style navigations and interactions.-->
+						</li>
+						<li>
+							Fresh
+							<!--- Always up-to-date thanks to the service worker update process.-->
+						</li>
+						<li>
+							Safe
+							<!--- Served via TLS to prevent snooping and ensure content hasn’t been tampered with.-->
+						</li>
+						<li>
+							Discoverable
+							<!--- Are identifiable as “applications” thanks to W3C manifests and service worker registration scope allowing search engines to find them.-->
+						</li>
+						<li>
+							Re-engageable
+							<!--- Make re-engagement easy through features like push notifications.-->
+						</li>
+						<li>
+							Installable
+							<!--- Allow users to “keep” apps they find most useful on their home screen without the hassle of an app store.-->
+						</li>
+						<li>
+							Linkable
+							<!--- Easily share via URL and not require complex installation.-->
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>Progressive Web Apps are:</h4>
+
+					<blockquote>
+						Combination of Web APIs, technologies and design concepts which create native app experience in a mobile browser. PWAs are
+						deployed to servers, can be accessed through URLs and get indexed by search engines.
+					</blockquote>
+
+				</section>
+
+				<section>
+					<h4>Progressive Web Apps are:</h4>
+
+					<ul>
+						<li>index.html</li>
+						<li>manifest.json</li>
+						<li>sevice-worker.js</li>
+					</ul>
+					<ul class="fragment fade-up">
+						<li>CacheStorage</li>
+						<li>BackgroundSync</li>
+						<li>WebPush</li>
+					</ul>
+
+				</section>
+
+
+				<section>
+					<h5>...and all other HTML5 APIs</h5>
+					<a target="_blank" href="images/html-apis.png"><img class="w-700" src="images/html-apis.PNG" /></a>
+					<div>
+						<a target="_blank" href="https://whatwebcando.today">What Web Can Do Today</a>
+					</div>
+				</section>
+
+				<section>
+					<h4>Progressive Web Apps are:</h4>
+					<h2>For users</h2>
+				</section>
+
+				<section>
+					<h4>Mobile</h4>
+					<video height="600" controls muted>
+						<source src="demos/pockedex.mp4" type="video/mp4">
+					</video>
+				</section>
+				<section>
+					<h4>Desktop</h4>
+				</section>
+			</section>
+			<section>
+				<h3>
+					What they are not?
+				</h3>
+				<ul>
+					<li>They are not native apps replacements</li>
+					<li>They are not a solution for not optimized websites</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Why should I care?</h3>
+				<ul>
+					<li>Provide faster web experience</li>
+					<li>Work offline and on flaky connections</li>
+					<li>Are cheap to implement</li>
+
+					<li>Advertise your native app </li>
+					<li>Testing ground before native implementation</li>
+
+					<li>Another thread to play with</li>
+				</ul>
+			</section>
+
+			<section>
+				<section>
+					<h3>
+						How to start?
+					</h3>
+				</section>
+				<section>
+					<h3>
+						Demo app
+					</h3>
+					<video height="450" controls muted>
+						<source src="demos/hometasks-demo.mp4" type="video/mp4">
+					</video>
+				</section>
+				<section>
+					<h3>
+						&#9312; Check your website
+					</h3>
+					<ul>
+						<li><a target="_blank" href="https://developers.google.com/web/progressive-web-apps/checklist">Progressive Web App Checklist</a></li>
+						<li><a target="_blank" href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk">Lighthouse tool</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3>
+						Demo lighthouse
+					</h3>
+					<video height="450" controls muted>
+						<source src="demos/lighthouse.mp4" type="video/mp4">
+					</video>
+				</section>
+				<section>
+					<h3>Demo lighthouse results</h3>
+					<div>
+						<a target="_blank" href="demos/docs/lighthouse-report-before.pdf">Lighthouse Report</a>
+						<br/><br/>
+					</div>
+					<ul>
+						<li>error: App can load on offline/flaky connections</li>
+						<li>error: Network connection is secure</li>
+						<li>error: User can be prompted to Add to Homescreen</li>
+						<li>error: Installed web app will launch with custom splash screen</li>
+						<li>error: Address bar matches brand colors</li>
+					</ul>
+				</section>
+				<section>
+					<h3>
+						&#9313; Create manifest
+					</h3>
+					<ul>
+						<li><a target="_blank" href="https://tomitm.github.io/appmanifest/">Manifest generator</a></li>
+						<li><a target="_blank" href="https://manifest-validator.appspot.com/">Manifest validator</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3>
+						manifest.json
+					</h3>
+					<pre><code class="hljs" data-trim  >
+{
+  "name": "Home tasks",
+  "short_name": "Tasks",
+  "icons": [
+    {
+      "src": "/images/icons/install-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#29b6f6",
+  "theme_color": "#29b6f6"
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>
+						head section
+					</h3>
+					<pre><code class="hljs" data-trim  >
+(...)
+<link rel="manifest" href="/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Tasks">
+<meta name="apple-mobile-web-app-title" content="Tasks">
+<meta name="theme-color" content="#29b6f6">
+<meta name="msapplication-navbutton-color" content="#29b6f6">
+<meta name="msapplication-starturl" content="https://localhost.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+(...)
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>
+						&#9314; Create icons
+					</h3>
+					<ul>
+						<li><a target="_blank" href="https://realfavicongenerator.net">Real favicon generator</a></li>
+						<li>144x144 PNG is required</li>
+					</ul>
+				</section>
+				<section>
+					<h3>
+						&#9315; Create & register service worker
+					</h3>
+					<pre><code class="hljs" data-trim  >
+if ('serviceWorker' in navigator) {
+    navigator
+        .serviceWorker
+        .register('/service-worker.js')
+        .then((registration) => {
+            console.log("service worker registered", registration);
+        })
+        .catch((error) => {
+            console.error("#Service Worker registration error: ", error);
+        });
+}
+					</code></pre>
+				</section>
+				<section>
+					<h3>
+						&#9316; Inspect manifest
+					</h3>
+					<a target="_blank" href="demos/screens/tools-manifest.png"><img class="w-1000" src="demos/screens/tools-manifest.png" /></a>
+				</section>
+				<section>
+					<h3>
+						Demo: chrome
+					</h3>
+					<div class="inline">
+						<img class="w-350" src="demos/screens/chrome.jpg" />
+					</div>
+					<div class="inline">
+						<video height="560" controls muted>
+							<source src="demos/chrome.mp4" type="video/mp4">
+						</video>
+					</div>
+				</section>
+
+				<section>
+					<h3>
+						Demo: opera
+					</h3>
+					<div class="inline">
+						<img class="w-350" src="demos/screens/opera.jpg" />
+					</div>
+					<div class="inline">
+						<video height="560" controls muted>
+							<source src="demos/opera.mp4" type="video/mp4">
+						</video>
+					</div>
+				</section>
+				<section>
+					<h3>
+						Demo: firefox
+					</h3>
+					<div class="inline">
+						<img class="w-350" src="demos/screens/firefox.jpg" />
+					</div>
+					<div class="inline">
+						<video height="560" controls muted>
+							<source src="demos/ff.mp4" type="video/mp4">
+						</video>
+					</div>
+				</section>
+				<section>
+					<h3>
+						Demo: safari
+					</h3>
+					<div class="inline">
+						<a target="_blank" href="demos/screens/safari.png"><img class="w-800" src="demos/screens/safari.PNG" /></a>
+					</div>
+				</section>
+				<section>
+					<h3>
+						Demo: safari
+					</h3>
+					<div class="inline">
+						<video height="560" controls muted>
+							<source src="demos/safari.mp4" type="video/mp4">
+						</video>
+					</div>
+				</section>
+				<section>
+					<h3>Demo: chrome windows</h3>
+					<a target="_blank" href="demos/screens/chrome-add-to-desktop.png"><img class="w-800" src="demos/screens/chrome-add-to-desktop.png" /></a>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>
+						App improvements:
+					</h3>
+					<ul>
+						<li>Load time
+							<ul>
+								<li>Cache app shell resources</li>
+								<li>Cache dynamic resources</li>
+							</ul>
+						</li>
+						<li>
+							Offline mode
+							<ul>
+								<li>Cache api responses</li>
+								<li>Intercept update requests</li>
+								<li>Background sync</li>
+							</ul>
+						</li>
+						<li>Local notifications</li>
+					</ul>
+				</section>
+				<section>
+					<h3>
+						App architecture:
+					</h3>
+
+				</section>
+
+				<section>
+					<h3>
+						Standard
+					</h3>
+					<a target="_blank" href="demos/arc/1.png"><img class="no-border w-800" src="demos/arc/1.png" /></a>
+				</section>
+				<section>
+					<h3>
+						ServiceWorker
+					</h3>
+					<a target="_blank" href="demos/arc/2.png"><img class="no-border w-800" src="demos/arc/2.png" /></a>
+				</section>
+				<section>
+					<h3>
+						ServiceWorker no connection
+					</h3>
+					<a target="_blank" href="demos/arc/3.png"><img class="no-border w-800" src="demos/arc/3.png" /></a>
+				</section>
+				<section>
+					<h3>
+						ServiceWorker not supported
+					</h3>
+					<a target="_blank" href="demos/arc/4.png"><img class="no-border w-800" src="demos/arc/4.png" /></a>
+				</section>			
+			</section>
+			<section>
+				<section>
+					<h3>Required Web APIs</h3>
+				</section>
+				<section>
+					<h3>Service worker</h3>
+					<blockquote>
+						A service worker is a script that stands between your website and the network, giving you, among other things, the ability
+						to intercept network requests and respond to them in different ways.
+					</blockquote>
+				</section>
+				<section>
+					<h3>Service worker</h3>
+					<ul>
+						<li>Separate thread</li>
+						<li>Separate context</li>
+						<li>Single service worker per scope</li>
+						<li>Lifecycle: download, install, activate</li>
+						<li>Events: install, activate, fetch, message, push, sync</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Service worker: tooling</h3>
+					<ul>
+						<li>Chrome: chrome://inspect/#service-workers</li>
+						<li>Opera: opera://inspect/#service-workers</li>
+						<li>Firefox: about:debugging#workers</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Cache API</h3>
+<pre><code class="hljs">    // cache files
+    caches
+    .open(shellCacheName)
+    .then((cache) => {
+          return cache.addAll(files);
+    });
+
+    //  cache requests responses
+    cache.put(request, response);
+
+    // retrieve
+    caches
+    .match(event.request, {
+      ignoreSearch: hasQuery,
+      ignoreMethod: true,
+      ignoreVary: true
+    })
+    .then((cacheMatch) => {
+        return cacheMatch;
+    })
+
+    // delete
+    caches.delete(key);
+</code></pre>		
+				</section>
+				<section>
+					<h3>Fetch API</h3>
+<pre><code class="hljs">    // fetching
+    var promise = fetch(request)
+    .then((response) => {
+        var responseClone = response.clone();
+		
+        // do something with resposne
+
+        return responseClone;
+    })
+
+    // create request manually
+    var promise = fetch('/api/tasks/' + task.id, {
+        method: 'PUT',
+        mode: 'cors',
+        redirect: 'follow',
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(task)
+    });
+
+    // create response manually
+    var blob = new Blob([jsonString], {
+        type: "application/json"
+    });
+    var response = new Response(blob, {
+        "status": 200
+    });
+</code></pre>
+				</section>
+				<section>
+					<h3>indexedDb & localforage</h3>
+<pre><code class="hljs">localforage.getItem(id)
+
+localforage.setItem(id, object)
+
+localforage.keys()
+
+localforage.removeItem(.id)
+</code></pre>		
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Precache app-shell files</h3>
+				</section>
+				<section>
+					<h3>Files to cache</h3>
+					<pre><code class="hljs">/* cache-keys.json */
+[
+  "/",
+  "/manifest.json",
+  "/done",
+  "/site.css",
+  "/site.js",
+  "/systemjs.config.js",
+  "/app/main.js",
+  "/app/app.module.js",
+  "/app/app.routing.js",
+  "/app/app.component.html",
+  "/app/app.component.js",
+  "/app/done/done.component.html",
+  "/app/done/done.component.css",
+  "/app/done/done.component.js",
+  "/app/todo/todo.component.html",
+  "/app/todo/todo.component.css",
+  "/app/todo/todo.component.js",
+  "/app/shared/model.js",
+  "/app/shared/categories.service.js",
+  "/app/shared/tasks.service.js",
+  "/app/shared/users.service.js",
+  /* *** */
+  "https://fonts.googleapis.com/icon?family=Material+Icons",
+  "https://fonts.googleapis.com/css?family=Roboto:400,300,100"
+]
+</code></pre>
+				</section>
+				<section>
+
+					<h3>Install event</h3>
+					<pre><code class="hljs">/* service-wroker.js*/
+var shellCacheName = 'app-shell-cache-v1.0';
+
+self.addEventListener("install", (event) => {
+    console.log('[ServiceWorker] Install');
+
+    var installPromise = caches
+        .open(shellCacheName)
+        .then((cache) => {
+            return fetch('/sw/cache-keys.json')
+                .then((response) => {
+                    return response.json();
+                }).then((files) => {
+                    console.log('[[ServiceWorker]] install: ', files);
+                    return cache.addAll(files);
+                });
+        });
+
+    event.waitUntil(installPromise);
+});
+</code></pre>
+				</section>
+				<section>
+					<h3>Activate event</h3>
+					<pre><code class="hljs">/* service-wroker.js*/
+self.addEventListener("activate", (event) => {
+    console.log('[ServiceWorker] Activate');
+
+    var activatePromise = caches
+        .keys()
+        .then((keyList) => {
+            return Promise.all(keyList.map((key) => {
+                if (key !== shellCacheName) {
+                    console.log('[ServiceWorker] Removing old cache', key);
+                    return caches.delete(key);
+                }
+            }));
+        });
+
+    event.waitUntil(activatePromise);
+});
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Fetch from cache</h3>
+					<pre><code class="hljs">self.addEventListener('fetch', (event) => {
+    var responsePromise = readFromCacheOrFetch(event);
+    event.respondWith(responsePromise);
+});
+function readFromCacheOrFetch(event) {
+    var hasQuery = event.request.url.indexOf('?') !== -1;
+    return caches
+        .match(event.request, {
+            ignoreSearch: hasQuery,
+            ignoreMethod: true,
+            ignoreVary: true
+        })
+        .then((cacheMatch) => {
+            if (cacheMatch) {
+                return cacheMatch;
+            } else {
+                return fetch(event.request);
+            }
+        });
+}
+</code></pre>
+				</section>
+				<section>
+					<h3>Cache google fonts</h3>
+					<pre><code class="hljs">self.addEventListener('fetch', (event) => {
+    var responsePromise = null;
+    if (/fonts.gstatic.com/.test(event.request.url)) {
+        responsePromise = cacheFonts(event);
+    } else {
+        responsePromise = readFromCacheOrFetch(event);
+    }
+    event.respondWith(responsePromise);
+});
+
+var cacheFonts = function (event) {
+    var hasQuery = event.request.url.indexOf('?') !== -1;
+    var cachePromise = caches
+    .open(fontCacheName)
+    .then((cache) => {
+    	var responsePromise = cache.match(event.request, {
+    		ignoreSearch: hasQuery,
+    		ignoreMethod: true,
+    		ignoreVary: true
+    	})
+    	.then((cacheMatch) => {
+    	    if (cacheMatch) {
+    	    	return cacheMatch;
+    	    } else {
+    	    	var fetchPromise = fetch(event.request)
+    	    	    .then((response) => {
+    	    	    	cache.put(event.request.url, response.clone());
+    	    	    	return response.clone();
+    	    	    });
+    	    	return fetchPromise;
+    	    }
+    	});
+        return responsePromise;
+    });
+
+    return cachePromise;
+}
+</code></pre>
+				</section>
+				<section>
+					<h3>Tools: Cache storage</h3>
+					<a target="_blank" href="demos/screens/app-cache.png"><img class="w-800" src="demos/screens/app-cache.png" /></a>
+				</section>
+				<section>
+					<h3>Tools: Network</h3>
+					<a target="_blank" href="demos/screens/cache-network.png"><img class="w-800" src="demos/screens/cache-network.png" /></a>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Offline mode</h3>
+				</section>
+				<section>
+					<h3>Cache api responses</h3>
+					<pre><code class="hljs">self.addEventListener('fetch', (event) => {
+    var responsePromise = null;
+    if (/api\/categories/.test(event.request.url) || 
+        /api\/users/.test(event.request.url ||
+        /api\/tasks\/done/.test(event.request.url))) {
+        responsePromise = cacheApiResponses(event);
+    } 
+    event.respondWith(responsePromise);
+});
+function cacheApiResponses(event) {
+    var cachePromise = fetch(event.request)
+        .then((response) => {
+            return caches
+                .open(apiCacheName)
+                .then((cache) => {
+                    cache.put(event.request, response.clone());
+                    return response;
+                });
+        })
+        .catch((reason) => {
+            var hasQuery = event.request.url.indexOf('?') !== -1;
+            return caches
+                .match(event.request,
+                {
+                    ignoreSearch: hasQuery,
+                    ignoreMethod: true
+                })
+                .then((cacheMatch) => {
+                    if (cacheMatch) {
+                        return cacheMatch;
+                    } else {
+                        return Promise.reject();
+                    }
+                });
+        });
+	return cachePromise;
+}
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Cache api responses</h3>
+					<pre><code class="hljs">importScripts("/node_modules/localforage/dist/localforage.min.js");
+importScripts("/sw/tasks-repository.js");
+
+self.addEventListener('fetch', (event) => {
+    var responsePromise = null;
+    if (/api\/tasks\/todo/.test(event.request.url)) {
+        responsePromise = fetchAndCacheToDo(event);
+    } 
+    event.respondWith(responsePromise);
+});
+function fetchAndCacheToDo(event) {
+    var fetchPromise = fetch(event.request)
+        .then((response) => {
+            var cachePromise = response
+                .json()
+                .then((jsonRepponse) => {
+                    return Promise.all(jsonRepponse.map((task) => {
+                        return tasksRepository.addOrUpdate(task);
+                    })).then(() => {
+                        return tasksRepository.removeLeftovers(jsonRepponse);
+                    });
+                })
+                .then(() => {
+                    return getAllTodoTaskResponse();
+                })
+            return cachePromise;
+        });
+
+    return fetchPromise;
+}</code></pre>
+				</section>
+
+				<section>
+					<h3>Intercept update requests</h3>
+					<pre><code class="hljs">self.addEventListener('fetch', (event) => {
+    var responsePromise = null;
+    if (/api\/tasks/.test(event.request.url) && 
+        event.request.method !== "GET") {
+        responsePromise = addOrUpdateTaskRequest(event);
+    } 
+    event.respondWith(responsePromise);
+});
+function addOrUpdateTaskRequest(event) {
+    var requestPromise = fetch(event.request.clone())
+        .then((response) => {
+            response
+                .clone()
+                .json()
+                .then(task => {
+                    return tasksRepository.addOrUpdate(task);
+                });
+            return response;
+        })
+        .catch((error) => {
+            var promise = event
+            .request
+            .clone()
+            .json()
+            .then((task) => {
+                task.syncRequired = true;
+                return tasksRepository.addOrUpdate(task);
+            })
+            .then(task => {
+                var taskString = JSON.stringify(task);
+                var blob = new Blob([taskString],{type:"application/json"});
+                var response = new Response(blob,{"status":200});
+                return response;
+            });
+            return promise;
+        });
+    return requestPromise;
+}</code></pre>
+				</section>
+				<section>
+					<h3>Background sync - index.html</h3>
+					<pre><code class="hljs">if ('serviceWorker' in navigator) {
+    navigator
+        .serviceWorker
+        .ready
+        .then((registration) => {
+            if ('sync' in registration) {
+                return registration
+                    .sync
+                    .register("todo-sync");
+            } else {
+                window.addEventListener('online', () => {
+                    navigator
+                        .serviceWorker
+                        .controller
+                        .postMessage("todo-sync");
+                });
+                return Promise.resolve();
+            }
+        });
+}
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Background sync - service worker</h3>
+					<pre><code class="hljs">self.addEventListener('sync', (event) => {
+    if (event.tag === 'todo-sync') {
+        event.waitUntil(syncDb());
+    }
+});
+self.addEventListener('message', (event) => {
+    if (event.data === 'todo-sync') {
+        event.waitUntil(syncDb());
+    }
+});
+function syncDb() {
+    tasksRepository
+        .getTasksToSync()
+        .then((tasks) => {
+            var responsePromise = tasks.map((task) => {
+                var requestPromise = fetch('/api/tasks/' + task.id,
+                    {
+                        method: 'PUT',
+                        mode: 'cors',
+                        redirect: 'follow',
+                        headers: new Headers({
+                            'Content-Type': 'application/json'
+                        }),
+                        body: JSON.stringify(task)
+                    });
+                return requestPromise;
+            });
+            return Promise.all(responsePromise);
+        })
+        .then(responses => {
+            return Promise.all(responses.map(response => {
+                return response
+                    .json()
+                    .then(task => {
+                        return tasksRepository.addOrUpdate(task);
+                    });
+            }));
+        });
+}
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Local notifications - index.html</h3>
+					<pre><code class="hljs">document.addEventListener('DOMContentLoaded', function () {
+    if ("Notification" in window && Notification.permission !== "granted") {
+        Notification.requestPermission((result) => {
+            if (result !== 'granted')
+                console.warn("notification permission not granted");
+
+            return Promise.resolve();
+        }).catch(() => {
+            console.warn("cannot obtain perrmissions for notification");
+        });
+    }
+});
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Local notifications - service worker</h3>
+					<pre><code class="hljs">if (Notification.permission === "granted") {
+	self.registration.showNotification("Home Tasks!", {
+		body: "Database synced!",
+		icon: "/images/icons/favicon-194x194.png"
+	});
+}
+</code></pre>
+				</section>
+
+			</section>
+			<section>
+				<section>
+					<h3>sw toolbox</h3>
+				</section>
+				<section>
+					<h3>Installation</h3>
+					<pre><code class="hljs">importScripts('/node_modules/sw-toolbox/sw-toolbox.js');</code></pre>
+				</section>
+				<section>
+					<h3>Precache</h3>
+					<pre><code class="hljs">toolbox.precache(cacheKeys);
+toolbox.router.get('/(.*)', (req, vals, opts) => {
+  return toolbox.cacheFirst(req, vals, opts);
+});
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Fonts cache</h3>
+					<pre><code class="hljs">toolbox.router.get('/(.*)', (req, vals, opts) => {
+  return toolbox.cacheFirst(req, vals, opts);
+}, { origin: 'https://fonts.gstatic.com', cache: { name: "fonts-cache" }  });
+
+toolbox.router.get('/(.*)', (req, vals, opts) => {
+  return toolbox.cacheFirst(req, vals, opts);
+}, { origin: 'https://fonts.googleapis.com' });</code></pre>
+				</section>
+				<section>
+					<h3>API requests</h3>
+					<pre><code class="hljs">toolbox.router.get('/api/tasks/done/', (req, vals, opts) => {
+  return toolbox.networkFirst(req, vals, opts);
+}, {cache: { name: "api-cache" }});
+
+toolbox.router.get('/api/categories/', (req, vals, opts) => {
+  return toolbox.networkFirst(req, vals, opts);
+}, {cache: { name: "api-cache" }});
+
+toolbox.router.get('/api/users/', (req, vals, opts) => {
+  return toolbox.networkFirst(req, vals, opts);
+}, {cache: { name: "api-cache" }});
+</code></pre>
+				</section>
+				<section>
+					<h3>Intercept update requests</h3>
+					<pre><code class="hljs">toolbox.router.get('/api/tasks/todo/', (req, vals, opts) => {
+  return fetchAndCacheToDo(req);
+}, {cache: { name: "api-cache" }});
+
+toolbox.router.post('/api/tasks/', (req, vals, opts) => {
+  return addOrUpdateTaskRequest(req);
+}, {cache: { name: "api-cache" }});
+
+toolbox.router.put('/api/tasks/', (req, vals, opts) => {
+  return addOrUpdateTaskRequest(req);
+}, {cache: { name: "api-cache" }});</code></pre>
+				</section>
+
+			</section>
+			<section>
+				<h3>Browsers support</h3>
+				<ul>
+					<li><a target="_blank" href="https://jakearchibald.github.io/isserviceworkerready/">is service worker ready</a></li>
+					<li><a target="_blank" href="https://platform-status.mozilla.org">platform status</a></li>
+					<li><a target="_blank" href="https://www.chromestatus.com/features">chrome status</a></li>
+					<li><a target="_blank" href="https://dev.opera.com/articles/offline-with-upup-service-workers/">opera dev</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>References</h3>
+				<pre><code>https://addyosmani.com/blog/getting-started-with-progressive-web-apps/
+https://davidwalsh.name/fetch
+https://developers.google.com/web/fundamentals/getting-started/codelabs/offline/
+https://developers.google.com/web/fundamentals/getting-started/codelabs/your-first-pwapp/
+https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
+https://developers.google.com/web/updates/2015/12/background-sync
+https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker
+https://github.com/mozilla/serviceworker-cookbook
+https://jakearchibald.com/2014/offline-cookbook/
+https://localforage.github.io/localForage/#multiple-instances-createinstance
+https://manifest-validator.appspot.com/
+https://medium.com/offline-camp/hack-time-service-workers-background-sync-and-pouchdb-3c8b71535823
+https://ponyfoo.com/articles/backgroundsync
+https://realfavicongenerator.net
+https://serviceworke.rs/push-payload_index_doc.html
+https://tomitm.github.io/appmanifest/
+https://www.ampproject.org/it/docs/guides/author-develop/pwa-amp
+https://www.w3.org/TR/service-workers/
+https://www.youtube.com/watch?v=4-WnlHhqcjU&feature=youtu.be&list=PLFZ5NyC0xHDaaTy6tY9p0C0jd_rRRl5Zm</code></pre>
+			</section>
+			<section>
+				<h3>Download</h3>
+				<div>
+					<img src="images/qr.png" />
+				</div>
+				<a href="https://github.com/raflop/">github.com/raflop</a>
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				}
+			]
+		});
+	</script>
+</body>
+
+</html>

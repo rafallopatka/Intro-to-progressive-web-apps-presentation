@@ -1,0 +1,49 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7200B5EC-BD79-4C0F-BA39-F2A45B36AC17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7361E831-AC07-4A8B-B70B-944F98050F50}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTasks", "src\HomeTasks\HomeTasks.csproj", "{B1D72989-8F5E-4F16-8D1D-B5D6DA215627}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTasksPwa", "src\HomeTasksPwa\HomeTasksPwa.csproj", "{C40C89C0-77DB-4BC1-8738-A208D69B9E26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTasksPwaOptimized", "src\HomeTasksPwaOptimized\HomeTasksPwaOptimized.csproj", "{4A0327AA-423F-4146-B4AD-C087D5BA16BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTasksPwaOptimizedSwToolbox", "src\HomeTasksPwaOptimizedSwToolbox\HomeTasksPwaOptimizedSwToolbox.csproj", "{D230FF15-6596-4883-8E35-95EBA929210F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1D72989-8F5E-4F16-8D1D-B5D6DA215627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D72989-8F5E-4F16-8D1D-B5D6DA215627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D72989-8F5E-4F16-8D1D-B5D6DA215627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D72989-8F5E-4F16-8D1D-B5D6DA215627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C40C89C0-77DB-4BC1-8738-A208D69B9E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C40C89C0-77DB-4BC1-8738-A208D69B9E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C40C89C0-77DB-4BC1-8738-A208D69B9E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C40C89C0-77DB-4BC1-8738-A208D69B9E26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A0327AA-423F-4146-B4AD-C087D5BA16BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A0327AA-423F-4146-B4AD-C087D5BA16BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A0327AA-423F-4146-B4AD-C087D5BA16BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A0327AA-423F-4146-B4AD-C087D5BA16BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D230FF15-6596-4883-8E35-95EBA929210F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D230FF15-6596-4883-8E35-95EBA929210F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D230FF15-6596-4883-8E35-95EBA929210F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D230FF15-6596-4883-8E35-95EBA929210F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1D72989-8F5E-4F16-8D1D-B5D6DA215627} = {7200B5EC-BD79-4C0F-BA39-F2A45B36AC17}
+		{C40C89C0-77DB-4BC1-8738-A208D69B9E26} = {7200B5EC-BD79-4C0F-BA39-F2A45B36AC17}
+		{4A0327AA-423F-4146-B4AD-C087D5BA16BA} = {7200B5EC-BD79-4C0F-BA39-F2A45B36AC17}
+		{D230FF15-6596-4883-8E35-95EBA929210F} = {7200B5EC-BD79-4C0F-BA39-F2A45B36AC17}
+	EndGlobalSection
+EndGlobal

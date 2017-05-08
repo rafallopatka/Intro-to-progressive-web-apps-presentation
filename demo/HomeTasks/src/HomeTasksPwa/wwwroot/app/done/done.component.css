@@ -1,0 +1,23 @@
+﻿.task {
+    
+}
+
+    .task.completed {
+        -ms-opacity: 0.3;
+        opacity: 0.3;
+    }
+
+        .task.completed .description {
+            text-decoration: line-through;
+        }
+
+
+    .task .chip {
+        position: relative;
+        margin-top: -40px;
+        margin-left: 7px;
+        float: left;
+        background: rgba(255, 255, 255, .5);
+        width: 80px;
+        text-align: center;
+    }

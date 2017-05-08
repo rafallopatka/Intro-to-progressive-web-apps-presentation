@@ -1,0 +1,103 @@
+#app-content {
+    padding-top: 50px;
+}
+
+
+.nav-wrapper {
+    z-index: 1000;    
+}
+
+
+#sidenav-overlay {
+    z-index: 100;
+}
+
+
+select {
+    display: inline;
+}
+
+select option{
+    height: 50px;
+}
+
+
+.static-label {
+    top: 3rem !important;
+}
+
+.description-label {
+    top: 7rem !important;
+}
+
+textarea {
+    background: #fff !important;
+    min-height: 40px;
+    border: 1px solid #f2f2f2;
+}
+
+.card-image img {
+    height: 190px;
+}
+
+.description {
+    font-weight: 500;
+}
+
+
+.loading-screen {
+    background: #29b6f6;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+body, html {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-screen {
+    height: 100%;
+    margin: 0px;
+    width: 100%;
+    position: relative;
+    resize: vertical;
+    overflow: auto;
+}
+
+.loading-screen .center {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    padding: 20px;
+    transform: translateY(-50%);
+    resize: vertical;
+    overflow: auto;
+}
+
+
+.loading-screen h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.loading-screen .logo {
+    display: block;
+    width: 200px;
+    margin: auto;
+}
+
+    .loading-screen .loader {
+        width: 64px;
+        margin: auto;
+        display: none;
+    }
+
+.noscript {
+    color: #fff;
+    font-weight: 300;
+}
